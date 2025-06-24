@@ -1,0 +1,100 @@
+.task {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.task.completed {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2ecc71;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.complete-btn {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #95a5a6;
+  border-radius: 50%;
+  margin-right: 15px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.complete-btn:hover {
+  border-color: #2ecc71;
+}
+
+.complete-btn.completed {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: white;
+}
+
+.task-text {
+  flex-grow: 1;
+  word-break: break-word;
+  padding-right: 10px;
+}
+
+.task.completed .task-text {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.edit-btn, .delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  color: #3498db;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+}
+
+.edit-form {
+  flex-grow: 1;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Dragging state */
+.task.dragging {
+  opacity: 0.8;
+  background: #f0f0f0;
+}
